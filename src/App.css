@@ -1,9 +1,94 @@
+@import url(//db.onlinewebfonts.com/c/6e0077559d53bdf2875eb217c4bf6982?family=Babbel+Milliard);
+
 .App {
-  text-align: center;
+  height: 100vh;
+  font-size: calc(5px + 2vmin);
+  font-family: 'Babbel Milliard', sans-serif;
+}
+.landingPage{
+  width: 100%;
+  height: 100%;
+}
+#logo{
+  color: #FF790E;
+  font-weight: 900;
+  font-style: italic;
+}
+.topOfPage{
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#signInAndSignUpBtn button{
+  width: 8rem;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  border: 1px solid #0B2E43;
+  border-radius: 0.3rem;
+  font-weight: 800;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 200ms;
+}
+#signInAndSignUpBtn button#signUp:hover{
+  background-color: white;
+  color: #0B2E43;
 }
 
+#signInAndSignUpBtn button#signUp, #signInAndSignUpBtn button:hover {
+  background-color: #0B2E43;
+  color: white;
+}
+.bottomOfPage{
+  padding: 1.5rem;
+  background-color: #0B2E43;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.leftIntroPage button{
+  height: 3rem;
+  width: 12rem;
+  border-radius: 0.4rem;
+  border: none;
+  background-color: fff;
+  font-size: 1rem;
+  font-weight: 800;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
 
+
+}
+.leftIntroPage button img {
+  margin-left: 0.3rem;
+  margin-right: 0.4rem;
+}
+.leftBottomOfPage{
+    width: clamp(400px, 100%, 650px);
+}
+.rightImg{
+  height: 30rem;
+}
+.leftIntroPage{
+}
+
+.leftIntroPage h2{
+  color: rgb(255, 250, 197);
+  font-size:3rem;
+  width: 100%;
+}
+.languageButtons{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
