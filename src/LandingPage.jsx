@@ -1,4 +1,6 @@
-export default function LandingPage(){
+
+import SignIn from "./SignIn"
+export default function LandingPage(props){
 
 
     return (
@@ -6,22 +8,24 @@ export default function LandingPage(){
             <div className="topOfPage">
                 <div id="logo">LANGUAGEBuddy</div>
                 <div id="signInAndSignUpBtn">
-                    <button>Log in</button>
-                    <button id="signUp">Sign up</button>
+                    <button onClick={()=>props.HandleLogin('login')}>Log in</button>
+                    <button onClick={()=>props.HandleSignUp('sign-up')} id="signUp">Sign up</button>
                 </div>
             </div>
             <div className="bottomOfPage">
-                <div className="leftBottomOfPage"><LeftIntroPage/></div>
-                <div className="rightBottomOfPage"><img className="rightImg" src="https://www.babbel.com/static/index_page/en_US/images/hero-large-en.4ea397b62160120f1e32a58b9cbbfff1.webp" alt="" srcset="" /></div>
+
+                {props.page === 'landing-page'? <>
+                    <div className="leftBottomOfPage"><LeftIntroPage/></div>
+                    <div className="rightBottomOfPage"><img className="rightImg" src="https://www.babbel.com/static/index_page/en_US/images/hero-large-en.4ea397b62160120f1e32a58b9cbbfff1.webp" alt="" srcset="" /></div>
+                </> : <SignIn/>}
+               
             </div>
         </div>
     )
 }
 
 
-function SignInForm(){
 
-}
 
 function LeftIntroPage(){
     return (
