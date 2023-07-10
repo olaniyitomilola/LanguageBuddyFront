@@ -3,14 +3,24 @@ import SignIn from "./SignIn"
 export default function LandingPage(props){
 
 
+    const landingPageNav = ()=>{
+        if(props.page !== 'landing-page'){
+            props.HandleLogin('landing-page')
+        }
+    }
+
     return (
         <div className="landingPage">
             <div className="topOfPage">
-                <div id="logo">LANGUAGEBuddy</div>
-                <div id="signInAndSignUpBtn">
-                    <button onClick={()=>props.HandleLogin('login')}>Log in</button>
-                    <button onClick={()=>props.HandleSignUp('sign-up')} id="signUp">Sign up</button>
-                </div>
+                <div onClick={()=> landingPageNav()} id="logo">LANGUAGEBuddy</div>
+
+                {props.page === 'landing-page' ? 
+                    <div id="signInAndSignUpBtn">
+                        <button onClick={()=>props.HandleLogin('login')}>Log in</button>
+                        <button onClick={()=>props.HandleSignUp('sign-up')} id="signUp">Sign up</button>
+                    </div>
+                    : ""
+                }
             </div>
             <div className="bottomOfPage">
 
