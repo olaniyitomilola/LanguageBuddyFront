@@ -126,13 +126,14 @@
 }
 .loginForm input[type="email"], .loginForm input[type="password"]{
   border-bottom: #FF790E 2px solid;
+  background-color: transparent;
 }
 .loginForm input[type="button"]{
   background-color: #FF790E;
   color: white;
   font-weight: 600;
 }
-.loginForm div{
+.loginForm .loginHeader{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -143,11 +144,66 @@
   font-weight: 800;
   color: grey;
 }
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.newUserReg{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #FF790E;
 }
+
+.newUserReg span{
+  cursor: pointer;
+  color: #0B2E43;
+  transition: all 200ms;
+}
+.newUserReg span:hover {
+  color: #FF790E;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.radio-group label {
+  display: inline-block;
+  padding: 2rem 4rem;
+  flex-shrink: 1;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+  display: none;
+}
+
+.radio-group input[type="radio"]:checked+label {
+  background-color: red;
+}
+
+.languageSelection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.languageSelection button {
+  margin-top: 2rem;
+  background-color: #FF790E;
+  color: #f0f0f0;
+  border: none;
+  padding: 1rem 8rem;
+  font-weight: 800;
+  font-size: larger;
+  cursor: pointer;
+}
+.languageSelection h2{
+  color: bisque;
+}
+
+
