@@ -124,6 +124,10 @@
   border-radius: 0.3rem;
 
 }
+
+.loginForm input:focus {
+  outline: solid 2px #FF790E;
+}
 .loginForm input[type="email"], .loginForm input[type="password"]{
   border-bottom: #FF790E 2px solid;
   background-color: transparent;
@@ -153,13 +157,24 @@
   font-size: 0.9rem;
   color: #FF790E;
 }
+.alreadyAccount{
+  font-size: 0.9rem;
+  color: #FF790E;
+  margin-bottom: 0.5rem;
+}
+.alreadyAccount span{
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    transition: all 200ms;
+}
 
 .newUserReg span{
   cursor: pointer;
   color: #0B2E43;
   transition: all 200ms;
 }
-.newUserReg span:hover {
+.newUserReg span:hover, .alreadyAccount span:hover {
   color: #FF790E;
 }
 
@@ -197,13 +212,50 @@
   background-color: #FF790E;
   color: #f0f0f0;
   border: none;
-  padding: 1rem 8rem;
+  padding: 1rem 9rem;
   font-weight: 800;
   font-size: larger;
   cursor: pointer;
+  border-radius: 4px;
 }
 .languageSelection h2{
   color: bisque;
 }
 
+.registerForm{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.registerForm h2{
+  color: bisque;
+}
 
+.registerForm form{
+  display: flex;
+  flex-direction: column;
+  width: clamp(30rem, 80%, 40rem);
+  padding: 4rem 2rem;
+  background-color: #fff;
+  gap: 1rem;
+  border-radius: 0.8rem;
+}
+.registerForm form input{
+  padding: 1rem;
+  border: none;
+  border-bottom: #FF790E 2px solid;
+  background-color: transparent;
+  border-radius: 0.8rem;
+}
+
+.registerForm form input:focus{
+  outline: solid 2px #FF790E;
+}
+.registerForm form input[type = "button"]{
+  background-color: #FF790E;
+  font-size: large;
+  font-weight: 800;
+  color: #fff;
+}

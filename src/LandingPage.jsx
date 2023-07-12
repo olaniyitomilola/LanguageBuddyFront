@@ -28,7 +28,7 @@ export default function LandingPage(props){
                 {props.page === 'landing-page'? <>
                     <div className="leftBottomOfPage"><LeftIntroPage/></div>
                     <div className="rightBottomOfPage"><img className="rightImg" src="https://www.babbel.com/static/index_page/en_US/images/hero-large-en.4ea397b62160120f1e32a58b9cbbfff1.webp" alt="" srcset="" /></div>
-                </> : props.page === 'login'?  <SignIn signUpHandler = {props.HandleSignUp} /> : <SignUp/>}
+                </> : props.page === 'login'?  <SignIn signUpHandler = {props.HandleSignUp} /> : <SignUp signUpHandler = {props.HandleSignUp}/>}
                
             </div>
         </div>
