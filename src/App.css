@@ -264,6 +264,78 @@
   font-weight: 800;
   color: #fff;
 }
+.homePage{
+  padding: 1.5rem;
+}
+.navigator{
+  width: 100%;
+  display: flex;
+  flex-direction: row; 
+}
+
+.navigator button{
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 800;
+  border: none;
+  background-color: transparent;
+  color: #0B2E43;
+  cursor: pointer;
+}
+.navigator button.active{
+  background-color: #0B2E43;
+  color: #fff;
+  border-radius: 0.8rem;
+      transition: background-color 1s;
+}
+
+.searchUser{
+  position: relative;
+  padding: 0.5rem;
+  flex: 1;
+  border: 1px;
+  background-color: #fff;
+  margin-left: 3rem;
+}
+.searchUser::after, .searchUser::before{
+  content: "aaa";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #0B2E43;
+  border-radius: 4px;
+}
+
+.profImg{
+  width: 2rem;
+  height: 2rem;
+  background-color: #0B2E43;
+  border-radius: 50%;
+  border: solid 2px #FF790E;
+}
+.profi{
+  font-size: 0.8rem;
+}
+.profileIllus{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+
+}
+.homeAdiheader{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 3rem;
+}
+
+
+
+
 
 @media screen and (max-width: 768px){
   .leftIntroPage{

@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import {LandingPage} from './LandingPage';
-import HomePage from './HomePage'
+import {HomePage} from './HomePage'
 import './App.css';
 import { useState } from 'react';
 
