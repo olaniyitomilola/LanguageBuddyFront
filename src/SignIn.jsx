@@ -7,7 +7,7 @@ export default function SignIn(props){
 
                 <input type="email" placeholder="Email address" />
                 <input type="password" placeholder="Password" />
-                <input type="button" value="Log in" />
+                <input onClick={()=>props.signInHandler(1)} type="button" value="Log in" />
             </form>
         </div>
     )

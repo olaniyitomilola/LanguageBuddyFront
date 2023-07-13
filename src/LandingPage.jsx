@@ -1,7 +1,9 @@
 
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
-export default function LandingPage(props){
+
+
+export function LandingPage(props){
 
 
     const landingPageNav = ()=>{
@@ -12,7 +14,7 @@ export default function LandingPage(props){
 
     return (
         <div className="landingPage">
-            <div className="topOfPage">
+            {/* <div className="topOfPage">
                 <div onClick={()=> landingPageNav()} id="logo">LANGUAGEBuddy</div>
 
                 {props.page === 'landing-page' ? 
@@ -22,13 +24,14 @@ export default function LandingPage(props){
                     </div>
                     : ""
                 }
-            </div>
+            </div> */}
+            <TopNav page = {props.page} landingPageNav = {landingPageNav} HandleLogin = {props.HandleLogin} HandleSignUp = {props.HandleSignUp}/>
             <div className="bottomOfPage">
 
                 {props.page === 'landing-page'? <>
                     <div className="leftBottomOfPage"><LeftIntroPage/></div>
                     <div className="rightBottomOfPage"><img className="rightImg" src="https://www.babbel.com/static/index_page/en_US/images/hero-large-en.4ea397b62160120f1e32a58b9cbbfff1.webp" alt="" srcset="" /></div>
-                </> : props.page === 'login'?  <SignIn signUpHandler = {props.HandleSignUp} /> : <SignUp signUpHandler = {props.HandleSignUp}/>}
+                </> : props.page === 'login'?  <SignIn signInHandler = {props.signInHandler} signUpHandler = {props.HandleSignUp} /> : <SignUp signUpHandler = {props.HandleSignUp}/>}
                
             </div>
         </div>
@@ -49,3 +52,20 @@ function LeftIntroPage(){
         </div>
     )
 }
+
+export function TopNav(props){
+    return(
+        <div className="topOfPage">
+                <div onClick={()=> props.landingPageNav()} id="logo">LANGUAGEBuddy</div>
+
+                {props.page === 'landing-page' ? 
+                    <div id="signInAndSignUpBtn">
+                        <button onClick={()=>props.HandleLogin('login')}>Log in</button>
+                        <button onClick={()=>props.HandleSignUp('sign-up')} id="signUp">Sign up</button>
+                    </div>
+                    : ""
+                }
+            </div>
+    )
+}
+
