@@ -1,5 +1,7 @@
 @import url(//db.onlinewebfonts.com/c/6e0077559d53bdf2875eb217c4bf6982?family=Babbel+Milliard);
-
+*{
+  box-sizing: border-box;
+}
 .App {
   height: 100vh;
   font-size: calc(5px + 2vmin);
@@ -19,6 +21,11 @@
   cursor: pointer;
 }
 .topOfPage{
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  height: 4.5rem;
   padding: 1.5rem;
   display: flex;
   flex-direction: row;
@@ -264,15 +271,6 @@
   font-weight: 800;
   color: #fff;
 }
-.homePage{
-  padding: 1.5rem;
-}
-.navigator{
-  width: 100%;
-  display: flex;
-  flex-direction: row; 
-}
-
 .navigator button{
   flex: 1;
   padding: 0.5rem;
@@ -332,6 +330,97 @@
   width: 100%;
   gap: 3rem;
 }
+.homeBody {
+  margin-top: 4.5rem;
+  padding: 1.5rem;
+  height: 100%;
+
+
+}
+
+.homePage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigator {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.displayPanel{
+  padding-top: 2rem;
+  height: 100%;
+}
+.timeline{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.postsPanel{
+  flex: 6 1 auto;
+}
+.suggestedFriends{
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 1px solid #CBD5E1;
+}
+.friendList{
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+#eachSuggestedFriend{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--neutral-300, #CBD5E1);
+  background: var(--white, #FFF);
+  
+    /* Shadow/xs */
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  
+}
+.suggestedFriendLanguageAndLevel{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#suggestedLanguage, #suggestedLevel{
+  font-size: 0.8rem;
+  color: #FF790E;
+}
+#suggestedFriendName{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#suggestedFriendName button{
+  color: #0B2E43;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+  background-color: transparent;
+}
+.postSomething{
+  width: 100%;
+}
+.postSomething textarea{
+  width: 100%;
+}
+
+
+
 
 
 
@@ -339,6 +428,7 @@
 
 @media screen and (max-width: 768px){
   .leftIntroPage{
+    padding-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -346,10 +436,13 @@
   }
 
 
-.leftIntroPage h2 {
-  color: rgb(255, 250, 197);
-  font-size: 3rem;
-  width: 100%;
-  text-align: center;
-}
+  .leftIntroPage h2 {
+    color: rgb(255, 250, 197);
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+  }
+  .suggestedFriends{
+    display: none;
+  }
 }

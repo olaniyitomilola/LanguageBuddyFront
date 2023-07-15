@@ -1,9 +1,11 @@
-import { useState } from "react"
-import { TopNav } from "./LandingPage"
-
+import { useEffect, useRef, useState } from "react"
+import Timeline from "./Timeline"
+import Conversations from "./Conversations"
 export const HomePage = (props)=>{
 
     const [activeNav, setActiveNav] = useState('timeline')
+
+
 
     function handleNav (active){
         setActiveNav(active)
@@ -11,10 +13,17 @@ export const HomePage = (props)=>{
     return(
             <div className="homePage">
                 <HomeHeader/>
-                <div className="navigator">
-                    <button onClick={()=>handleNav('timeline')} className={activeNav === 'timeline'? 'active' : "" }>Timeline</button>
-                    <button onClick={()=> handleNav('conversations')} className={activeNav === 'conversations'? 'active' : ""} >Conversations</button>
+
+                <div className="homeBody">
+                    <div className="navigator">
+                        <button onClick={()=>handleNav('timeline')} className={activeNav === 'timeline'? 'active' : "" }>Timeline</button>
+                        <button onClick={()=> handleNav('conversations')} className={activeNav === 'conversations'? 'active' : ""} >Conversations</button>
+                    </div>
+                    <div className="displayPanel">
+                        {activeNav === "timeline"? <Timeline/> : activeNav === "conversations"? <Conversations/> : "Loading"}
+                    </div>
                 </div>
+                
                
               
 
@@ -22,10 +31,19 @@ export const HomePage = (props)=>{
 
     )
 }
+function homepagePanel(props){
+   
+    return(
 
-function HomeAdiHeader(){
-    
+        <div className="homepagePanel">
+
+        </div>
+    )
+  
+
 }
+
+
 function HomeHeader(props){
     return(
         <div className="topOfPage">
